@@ -4,7 +4,7 @@ Title: Easy way for scraping mobile.de web
 Version: 0.6.0
 Author: Robert NavCa <robertnavca@outlook.com>
 Maintainer: Robert NavCa <robertnavca@outlook.com>
-Description: mobileR offers an easy way to extract data from the well-know car seller web mobile.de. By the moment it only works with the Spanish version of the web.
+Description: mobileR offers an easy way to extract data from the well-know car seller web mobile.de.
 License: MIT
 Encoding: UTF-8
 LazyData: true
