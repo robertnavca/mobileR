@@ -88,6 +88,7 @@ mobile.de_scraping <-
 
       list_km2 <- strsplit(Km[,1], "\\s")
       Km <- as.data.frame(as.data.frame(t(as.data.frame(list_km2)))[,1])
+      Km[,1] <- gsub("\\.", "", Km[,1])
 
       # Cv --------------------------------------------------------
       list_cv <- strsplit(Cv[,1], "\\s+", )
@@ -210,8 +211,8 @@ mobile.de_scraping <-
                             Price,
                             df_valoration
         )
-        colnames(df_general) <- c("Model", "Year", "Month", "Km", "Kw", "Hp", "Fuel", "Transmission", "Acc_Free", "Doors", "Type", "Price_€", "Price Valoration")
-        df_general <- df_general[, c("Model", "Type", "Doors", "Year", "Month", "Kw", "Hp", "Km", "Fuel", "Transmission", "Acc_Free", "Price_€", "Price Valoration")]
+        colnames(df_general) <- c("Title", "Year", "Month", "Km", "Kw", "Hp", "Fuel", "Transmission", "Acc Free", "Doors", "Type", "Price €", "Price Valoration")
+        df_general <- df_general[, c("Title", "Type", "Doors", "Year", "Month", "Kw", "Hp", "Km", "Fuel", "Transmission", "Acc Free", "Price €", "Price Valoration")]
         row.names(df_general) <- NULL
         dataframe <- rbind(dataframe, df_general)
       } else {
@@ -224,8 +225,8 @@ mobile.de_scraping <-
                             Class,
                             Price
         )
-        colnames(df_general) <- c("Title", "Year", "Month", "Km", "Kw", "Hp", "Fuel", "Transmission", "Acc_Free", "Doors", "Type", "Price_€")
-        df_general <- df_general[, c("Title", "Type", "Doors", "Year", "Month", "Kw", "Hp", "Km", "Fuel", "Transmission", "Acc_Free", "Price_€")]
+        colnames(df_general) <- c("Title", "Year", "Month", "Km", "Kw", "Hp", "Fuel", "Transmission", "Acc Free", "Doors", "Type", "Price €")
+        df_general <- df_general[, c("Title", "Type", "Doors", "Year", "Month", "Kw", "Hp", "Km", "Fuel", "Transmission", "Acc Free", "Price €")]
         row.names(df_general) <- NULL
         df_general$"Price Valoration" <- NA
         dataframe <- rbind(dataframe, df_general)
