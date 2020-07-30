@@ -1,0 +1,14 @@
+Package: mobileR
+Type: Package
+Title: Easy way for scraping mobile.de web
+Version: 0.1.0
+Author: Robert NavCa <robertnavca@outlook.com>
+Maintainer: Robert NavCa <robertnavca@outlook.com>
+Description: mobile.R offers an easy way to extract data from the well-know car seller web mobile.de. By the moment it only works with the Spanish version of the web.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+    xml2,
+    rvest
+RoxygenNote: 7.1.1
