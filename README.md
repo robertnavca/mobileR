@@ -40,7 +40,7 @@ library(mobileR)
 # Firstly, save your search url in a new object
 my_search <- "https://suchen.mobile.de/fahrzeuge/search.html?damageUnrepaired=NO_DAMAGE_UNREPAIRED&isSearchRequest=true&makeModelVariant1.makeId=25200&maxMileage=150000&maxPowerAsArray=KW&maxPrice=11000&minMileage=125000&minPowerAsArray=KW&minPrice=10000&scopeId=C&sfmr=false"
 
-# Secondly, call the mobileR mein function and introduce the url object. Remember
+# Secondly, call the mobileR main function and introduce the url object. Remember
 # to save it in a new object
 my_df <- mobile.de_scraping(my_search)
 ```
