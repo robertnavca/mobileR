@@ -47,7 +47,7 @@ my_df <- mobile.de_scraping(my_search)
 
 That’s all, now you have your data frame created.
 
-![Our data frame](example_img.png)
+![Our data frame](images/example_img.png)
 
 ## Spanish edition
 
@@ -63,7 +63,7 @@ my_df <- mobile.de_scraping(my_search, lang = "es")
 
 And you will have all the work done,
 
-![Our data frame](example_img_es.png)
+![Our data frame](images/example_img_es.png)
 
 ## Problems
 
