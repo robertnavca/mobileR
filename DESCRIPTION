@@ -1,7 +1,7 @@
 Package: mobileR
 Type: Package
 Title: Easy Way for Scraping "Mobile.de" Web
-Version: 0.6.0
+Version: 0.6.1
 Author: Robert NavCa <robertnavca@outlook.com>
 Maintainer: Robert NavCa <robertnavca@outlook.com>
 Description: An easy way to extract data from the well-know car seller web mobile.de.

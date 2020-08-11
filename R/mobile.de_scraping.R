@@ -238,7 +238,7 @@ mobile.de_scraping <-
   } else if (lang == "es") {
 
     # Spanish edition ----------------------------------------------
-    webpage <- xml2::read_html(x)
+    webpage <- xml2::read_html(url)
     css_number_of_items <- ".h2"
     number_of_items <- rvest::html_node(webpage, css_number_of_items)
     text_number_of_items <- rvest::html_text(number_of_items)
@@ -249,14 +249,14 @@ mobile.de_scraping <-
     number_of_pages[number_of_pages > 40] <- 40
     dataframe <- data.frame()
 
-    web_no_page <- strsplit(x, ",pgn:")
-    other_web_no_page <- strsplit(x, ",pgs")
+    web_no_page <- strsplit(url, ",pgn:")
+    other_web_no_page <- strsplit(url, ",pgs")
 
     for (i in 1:number_of_pages) {
       if ((web_no_page[[1]][1] == other_web_no_page[[1]][1]) == FALSE) {
         url <- paste(web_no_page[[1]][1],",pgn:",i,",pgs",other_web_no_page[[1]][2], sep = "")
         } else {
-        url <- paste(x,",pgn:",i,",pgs:50", sep = "") }
+        url <- paste(url,",pgn:",i,",pgs:50", sep = "") }
 
       webpage <- xml2::read_html(url)
       css_model <- ".u-text-nowrap"
